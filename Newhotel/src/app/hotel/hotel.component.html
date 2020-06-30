@@ -1,0 +1,45 @@
+<!-- Default form login -->
+<mdb-card>
+    <!-- card content -->
+    <mdb-card-hader class="text-center p-3">
+        <p class="h4 mb-4">Search Hotel</p>
+    </mdb-card-hader>
+    <mdb-card-body class="px-lg-5 pt-0">
+        <!-- the form -->
+      <form class="text-center border border-light p-5">
+  
+    <!-- list of Hotels -->
+       <div class="md-form">
+        <input type="text" id="hotel_to_serach" class="form-control" mdbInput>
+        <label for="hotel_to_serach">Hotel Name</label>
+      </div>
+     
+      <!-- Date picker -->
+      <div class="md-form float-left">
+        <input type="date" id="ariveTo" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Departure date'" formControlName="departureDatePickerControl"
+        required mdbInput>
+        <label for="ariveTo">Departure Date</label>
+        <!-- <mdb-date-picker [inline]="true" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Selected date'" formControlName="datePickerControl"
+        required></mdb-date-picker> -->
+            
+      </div>
+      <div class="md-form float-left">
+        <input type="date" id="ariveTo" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Return date'" formControlName="returnDatePickerControl"
+        required mdbInput>
+        <label for="ariveTo">Return Date</label>
+        <!-- <mdb-date-picker [inline]="true" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Selected date'" formControlName="datePickerControl"
+        required></mdb-date-picker> -->
+             </div>
+
+    <!-- Search Hotel in button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Search Hotel</button>
+  
+  </form>
+</mdb-card-body>
+</mdb-card>
+  <!-- Default form login -->
+<div class="md-form">
+    <mdb-select-2 placeholder="Choose your option" > <!--/mdb-select-2> label="Example label" (ngModelChange)="getSelectedValue($event)" [ngModel]="selectedValue">
+      < <mdb-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mdb-select-option>   " add this code when you are done with the back up"-->
+    </mdb-select-2>
+  </div>

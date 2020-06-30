@@ -1,0 +1,70 @@
+<!-- Default form login -->
+<mdb-card>
+    <!-- card content -->
+    <mdb-card-hader class="text-center p-4">
+        <p class="h4 mb-4">Search For Filght</p>
+    </mdb-card-hader>
+    //<mdb-card-body class="px-lg-5 pt-0">
+        <!-- the form -->
+        <form class="text-center border border-light p-5"  [formGroup]="datePickerForm">
+        <!-- <form [formGroup]="reactiveForm"class="text-center border border-light p-5"> -->
+           <!-- Radio buttons -->
+           <!-- One-Way -->
+        
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="oneWay" [value]="false"
+                     formControlName="reactiveRadio" name="reactiveRadio" mdbInput>
+              <label class="form-check-label" for="oneWay">One-Way</label>
+            </div>
+          <!-- Round Trip -->
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="roundTrip" [value]="true"
+                     formControlName="reactiveRadio" name="reactiveRadio">
+              <label class="form-check-label" for="roundTrip">Round-Trip</label>
+            </div>
+            <!-- Multicity -->
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="multiCity" [value]="false"
+                       formControlName="reactiveRadio" name="reactiveRadio">
+                <label class="form-check-label" for="multiCity">Multi-City</label>
+              </div>
+              
+              
+            <!-- from where -->
+       <div class="md-form">
+        <input type="text" id="departFrom" class="form-control" mdbInput>
+        <label for="departFrom">To</label>
+      </div>
+      <!-- destinatiom -->
+      <div class="md-form">
+        <input type="text" id="ariveTo" class="form-control" mdbInput>
+        <label for="ariveTo">From</label>
+      </div>
+     
+      <!-- Date picker -->
+      <div class="md-form align: d-inline-block float-left ">
+        <input type="date" id="departdate" name="departdate" [options]="myDatePickerOptions" [placeholder]="'Departure date'" formControlName="departureDatePickerControl"
+        required mdbInput>
+        <label for="departdate">Departure Date</label>
+        <!-- <mdb-date-picker [inline]="true" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Selected date'" formControlName="datePickerControl"
+        required></mdb-date-picker> -->
+        
+      </div>
+      &nbsp;&nbsp;
+      <div class="md-form d-inline-block">
+        <input type="date" id="returndate" name="returndate" [options]="myDatePickerOptions" [placeholder]="'Return date'" formControlName="returnDatePickerControl"
+        required mdbInput>
+        <label for="returndate">Return Date</label>
+        <!-- <mdb-date-picker [inline]="true" name="mydate" [options]="myDatePickerOptions" [placeholder]="'Selected date'" formControlName="datePickerControl"
+        required></mdb-date-picker> -->
+             </div>
+
+          <div class="md-form ">
+            <button mdbBtn color="info" block="true" class="my-4" type="submit">Search Hotel</button> 
+          </div> 
+            </form>
+      
+    <!-- Search Hotel in button -->
+    
+</mdb-card-body>
+</mdb-card>
